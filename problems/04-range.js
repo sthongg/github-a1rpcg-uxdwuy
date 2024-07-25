@@ -11,10 +11,37 @@ range(7, 6); // []
 ***********************************************************************/
 
 
+// function range(start, end) {
+//   // Your code here 
+
+//   if (end < start) {
+//     return []
+//   }
+
+//   if (start === end) {
+//     return []
+//   }
+
+//   return [start, range(start + 1, end)]
+
+// }
+
 function range(start, end) {
-  // Your code here 
+  let result = [start]
+
+  if (end < start) {
+    return []
+  }
+
+  if (start === end) {
+    return []
+  }
+
+  return result.concat(range(start + 1, end))
+
 }
 
+console.log(range(1, 5))
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {

@@ -14,7 +14,17 @@ iceCreamShop([], 'honey lavender'); // false
 
 
 function iceCreamShop(flavors, favorite) {
-  // Your code here 
+  if (!flavors.length) {
+    return false
+  }
+
+  let currentFlavor = flavors.pop()
+
+  if (currentFlavor === favorite) {
+    return true
+  }
+
+  return iceCreamShop(flavors, favorite)
 }
 
 

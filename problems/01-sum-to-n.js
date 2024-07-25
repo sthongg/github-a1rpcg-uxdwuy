@@ -11,15 +11,29 @@ sumToN(9)  // returns 45
 sumToN(-8)  // returns null
 ***********************************************************************/
 
-function sumToN(n) {
-  let sum = n;
+function sumToN(n) {;
   if (n < 0) {
     return null;
-  } else {
-    sum += sumToN(n - 1);
   }
-  return sum;
+  return n += sumToN(n - 1);
 }
+
+
+// function sumToN(n) {
+
+//   if (n < 0) {
+//     return null
+//   }
+
+//   if (n === 1) {
+//     return n
+//   }
+
+//   return n + sumToN(n - 1)
+
+// }
+
+// test
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
